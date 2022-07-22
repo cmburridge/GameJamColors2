@@ -19,7 +19,7 @@ public class RandomMove : MonoBehaviour
         /** Move this ship forward per frame, if it gets too far from the game area, destroy it **/
  
         transform.position += transform.up * (Time.deltaTime * speed);
- 
+
         float distance = Vector3.Distance(transform.position, game_area.transform.position);
         if(distance > ship_spawner.death_circle_radius)
         {
