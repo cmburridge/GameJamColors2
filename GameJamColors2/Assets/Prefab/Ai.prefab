@@ -121,10 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 426e5d3bfbeb8ed4bbc685382c9395bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRed: 0
-  isGreen: 0
-  isBlue: 0
-  isYellow: 0
+  targetColor: {fileID: 11400000, guid: edbb46c305ccd244d9e734dc6ea19865, type: 2}
+  turnCount: {fileID: 11400000, guid: 6899116a924e45042a4fe57b131fc2d3, type: 2}
+  health: {fileID: 11400000, guid: 63611a5cb6e8a6d4aa4a27c9c161e580, type: 2}
 --- !u!114 &9145138248656525534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,21 +253,9 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3219769667938760691, guid: cac8da947d8b80849880b2be42b0382f, type: 3}
-        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
-        m_MethodName: ResetPopulation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 6899116a924e45042a4fe57b131fc2d3, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: IncreaseValue
+      - m_Target: {fileID: 7560071558041304147}
+        m_TargetAssemblyTypeName: RandomColor, Assembly-CSharp
+        m_MethodName: CheckColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,37 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class RandomColor : MonoBehaviour
 {
     Color[] colors = { new Color(0,1,0,1), new Color(1,0,0,1), new Color(0,0,1,1),  new Color(1,1,0,1)};
-    public bool isRed;
-    public bool isGreen;
-    public bool isBlue;
-    public bool isYellow;
+
+    public TargetData targetColor;
+    public IntData turnCount;
+    public IntData health;
     void Start()
     {
         GetComponent<SpriteRenderer>().material.color = colors[Random.Range(0,colors.Length)];
     }
-
-    private void Update()
+    
+    public void CheckColor()
     {
-        if (GetComponent<SpriteRenderer>().material.color == new Color(0,1,0,1))
+        if (GetComponent<SpriteRenderer>().material.color == targetColor.wantedColor)
         {
-            isGreen = true;
+            turnCount.value += 1;
         }
-        if (GetComponent<SpriteRenderer>().material.color == new Color(1,0,0,1))
+        else
         {
-            isRed = true;
-        }
-        if (GetComponent<SpriteRenderer>().material.color == new Color(0,0,1,1))
-        {
-            isBlue = true;
-        }
-        if (GetComponent<SpriteRenderer>().material.color == new Color(1,1,0,1))
-        {
-            isYellow = true;
+            health.value += -1;
         }
     }
 }

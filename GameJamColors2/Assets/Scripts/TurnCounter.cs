@@ -17,6 +17,7 @@ public class TurnCounter : MonoBehaviour
         turnStart.Invoke();
         turnStart.Invoke();
         uiColor.color = targetColor.wantedColor;
+        uiColor.color = targetColor.wantedColor;
     }
 
     private void Update()
@@ -24,9 +25,9 @@ public class TurnCounter : MonoBehaviour
         scoreBoard.text = turnCount.value.ToString();
         if (turnCount.value > checkpoint)
         {
-            uiColor.color = targetColor.wantedColor;
             checkpoint += 3;
             turnStart.Invoke();
+            uiColor.color = targetColor.wantedColor;
         }
     }
 }
