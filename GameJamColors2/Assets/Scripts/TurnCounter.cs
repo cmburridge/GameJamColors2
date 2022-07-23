@@ -1,22 +1,23 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TurnCounter : MonoBehaviour
 {
-    public int time;
+    public IntData turnCount;
+    public int checkpoint = 3;
     public UnityEvent turnStart;
+
+    private void Start()
+    {
+        turnStart.Invoke();
+    }
 
     private void Update()
     {
-        time += 1;
-        Debug.Log(time);
-        
-        if (time >= 5000)
+        if (turnCount.value > checkpoint)
         {
-            time = 0;
+            checkpoint += 3;
             turnStart.Invoke();
         }
     }

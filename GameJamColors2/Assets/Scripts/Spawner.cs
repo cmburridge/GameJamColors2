@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public int ship_count = 0;
     public int ship_limit = 150;
     public int ships_per_frame = 1;
- 
+
     public float spawn_circle_radius = 80.0f;
     public float death_circle_radius = 90.0f;
  
@@ -23,9 +23,9 @@ public class Spawner : MonoBehaviour
     }
 
     void Update()
-        {
-            MaintainPopulation();
-        }
+    {
+        MaintainPopulation();
+    }
 
         void InitialPopulation()
         {
