@@ -150,6 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set1: 1
   set2: 0
+  spritesOP:
+  - {fileID: 21300000, guid: cbc74f7f1853a5f4f91372e4924a55ea, type: 3}
+  - {fileID: 21300000, guid: cfe8bf161759a88449509ded2ebd5e80, type: 3}
+  - {fileID: 21300000, guid: 2f34ab4e139cf5142ac628cf35de31d4, type: 3}
   targetColor: {fileID: 11400000, guid: edbb46c305ccd244d9e734dc6ea19865, type: 2}
   turnCount: {fileID: 11400000, guid: 6899116a924e45042a4fe57b131fc2d3, type: 2}
   foodCount: {fileID: 11400000, guid: 7745c802c317dd04d83e2592426da881, type: 2}

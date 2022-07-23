@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83deb44a409f0040a7a8ef13084b7d3, type: 3}
   m_Name: WantedColor
   m_EditorClassIdentifier: 
-  wantedColor: {r: 0, g: 0, b: 0, a: 0}
+  wantedColor: {r: 1, g: 0, b: 1, a: 1}
+  Ui: {r: 0, g: 0, b: 1, a: 1}
+  wantedSprite: {fileID: 21300000, guid: cfe8bf161759a88449509ded2ebd5e80, type: 3}
+  spritesOP:
+  - {fileID: 21300000, guid: cbc74f7f1853a5f4f91372e4924a55ea, type: 3}
+  - {fileID: 21300000, guid: cfe8bf161759a88449509ded2ebd5e80, type: 3}
+  - {fileID: 21300000, guid: 2f34ab4e139cf5142ac628cf35de31d4, type: 3}
