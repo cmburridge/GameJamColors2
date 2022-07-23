@@ -12,12 +12,14 @@ public class TurnCounter : MonoBehaviour
     public Image uiColor;
     public TargetData targetColor;
 
+    public IntData eaten;
+
     private void Start()
     {
         turnStart.Invoke();
         turnStart.Invoke();
-        uiColor.color = targetColor.wantedColor;
-        uiColor.color = targetColor.wantedColor;
+        uiColor.color = targetColor.Ui;
+        uiColor.color = targetColor.Ui;
     }
 
     private void Update()
@@ -25,9 +27,10 @@ public class TurnCounter : MonoBehaviour
         scoreBoard.text = turnCount.value.ToString();
         if (turnCount.value > checkpoint)
         {
+            eaten.value = 0;
             checkpoint += 3;
             turnStart.Invoke();
-            uiColor.color = targetColor.wantedColor;
+            uiColor.color = targetColor.Ui;
         }
     }
 }

@@ -10,11 +10,12 @@ public class UpdateBar : MonoBehaviour
     public IntData health;
     public Slider bar;
     public GameObject player;
+    public bool isHealth;
 
     private void Update()
     {
         bar.value = health.value;
-        if (bar.value == 0)
+        if (bar.value == 0 && isHealth == true)
         {
             Destroy(player);
         }
