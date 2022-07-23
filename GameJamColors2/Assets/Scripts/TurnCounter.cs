@@ -12,10 +12,14 @@ public class TurnCounter : MonoBehaviour
     public Image uiColor;
     public TargetData targetColor;
 
+    public IntData health;
     public IntData eaten;
 
     private void Start()
     {
+        turnCount.value = 0;
+        health.value = 3;
+        eaten.value = 0;
         turnStart.Invoke();
         turnStart.Invoke();
         uiColor.color = targetColor.Ui;
