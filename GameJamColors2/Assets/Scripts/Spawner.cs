@@ -80,8 +80,7 @@ public class Spawner : MonoBehaviour
             GameObject new_ship = Instantiate(
                 ship_prefab,
                 position,
-                Quaternion.FromToRotation(Vector3.up, (game_area.transform.position - position)),
-                gameObject.transform
+                Quaternion.FromToRotation(Vector3.up, (game_area.transform.position - position))
             );
 
             RandomMove ship_script = new_ship.GetComponent<RandomMove>();
