@@ -6,7 +6,7 @@ public class TargetData : ScriptableObject
 {
     Color[] colors2 = { new Color(0,1,1,1), new Color(1,0,1,1), new Color(0,1,0,1)};
     public Color wantedColor;
-    Color[] colors1 = { new Color(.5f,.5f,.5f,1), new Color(0f,.5f,1f,1), new Color(1,0.92f,0.016f,1)};
+    Color[] colors1 = { new Color(.6f,.6f,.4f,1), new Color(0f,.5f,1f,1), new Color(1,0.92f,0.016f,1)};
     public Color Ui;
 
     public Sprite wantedSprite;    

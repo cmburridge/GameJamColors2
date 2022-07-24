@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83deb44a409f0040a7a8ef13084b7d3, type: 3}
   m_Name: WantedColor
   m_EditorClassIdentifier: 
-  wantedColor: {r: 1, g: 0, b: 1, a: 1}
-  Ui: {r: 0, g: 0, b: 1, a: 1}
-  wantedSprite: {fileID: 21300000, guid: cfe8bf161759a88449509ded2ebd5e80, type: 3}
+  wantedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Ui: {r: 0, g: 1, b: 1, a: 1}
+  wantedSprite: {fileID: -4606211810844095364, guid: 5c7f5e48d4c3cbd47967491c38926e8a, type: 3}
   spritesOP:
-  - {fileID: 21300000, guid: cbc74f7f1853a5f4f91372e4924a55ea, type: 3}
-  - {fileID: 21300000, guid: cfe8bf161759a88449509ded2ebd5e80, type: 3}
-  - {fileID: 21300000, guid: 2f34ab4e139cf5142ac628cf35de31d4, type: 3}
+  - {fileID: -4606211810844095364, guid: 5c7f5e48d4c3cbd47967491c38926e8a, type: 3}
+  - {fileID: -4822093359860835589, guid: 562400f0dfe101b4da03edac5f830377, type: 3}
+  - {fileID: 432510946791459891, guid: 19605f1bed483b94cad75ff14ce4e1a0, type: 3}

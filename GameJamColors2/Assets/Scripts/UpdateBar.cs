@@ -14,11 +14,14 @@ public class UpdateBar : MonoBehaviour
     public bool isHealth;
     public UnityEvent onDeath;
 
+    public GameObject prefab;
+
     private void Update()
     {
         bar.value = health.value;
         if (bar.value == 0 && isHealth == true)
         {
+            Instantiate(prefab, player.transform.position, Quaternion.identity);
             onDeath.Invoke();
             Destroy(player);
         }
