@@ -8,9 +8,9 @@ using Random = UnityEngine.Random;
 public class RandomColor : MonoBehaviour
 {
     public bool set1;
-    Color[] colors1 = { new Color(0,1,1,1), new Color(1,0,1,1), new Color(0,1,0,1)};
+    Color[] colors2 = { new Color(0,1,1,1), new Color(1,0,1,1), new Color(0,1,0,1)};
     public bool set2;
-    Color[] colors2 = { new Color(.5f,.5f,.5f,1), new Color(0f,0f,1f,1), new Color(1,0.92f,0.016f,1)};
+    Color[] colors1 = { new Color(.5f,.5f,.5f,1), new Color(0f,.5f,1f,1), new Color(1,0.92f,0.016f,1)};
     
     public Sprite[] spritesOP = {};
 
@@ -34,11 +34,11 @@ public class RandomColor : MonoBehaviour
     {
         if ( GetComponent<SpriteRenderer>().material.color == targetColor.wantedColor && GetComponent<SpriteRenderer>().sprite == targetColor.wantedSprite)
         {
+            health.value += -1;
             turnCount.value += 1;
         }
         else
         {
-            health.value += -1;
             turnCount.value += 1;
         }
     }

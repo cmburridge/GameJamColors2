@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TurnCounter : MonoBehaviour
 {
     public IntData turnCount;
-    public int checkpoint = 1;
+    public int checkpoint = 8;
     public UnityEvent turnStart;
     public Text scoreBoard;
     public Image uiColor;
@@ -30,14 +30,14 @@ public class TurnCounter : MonoBehaviour
         scoreBoard.text = turnCount.value.ToString();
         if (turnCount.value >= checkpoint)
         {
-            if (checkpoint >= 5 && checkpoint < 10)
+            if (checkpoint >= 15 && checkpoint < 30)
             {
-                checkpoint += 2;
+                checkpoint += 5;
                 turnStart.Invoke();
                 uiColor.color = targetColor.Ui;
                 uiColor.sprite = targetColor.wantedSprite;
             }
-            else if (checkpoint >= 10)
+            else if (checkpoint >= 30)
             {
                 checkpoint += 3;
                 turnStart.Invoke();
@@ -46,7 +46,7 @@ public class TurnCounter : MonoBehaviour
             }
             else
             {
-                checkpoint += 1;
+                checkpoint += 8;
                 turnStart.Invoke();
                 uiColor.color = targetColor.Ui;
                 uiColor.sprite = targetColor.wantedSprite;   
