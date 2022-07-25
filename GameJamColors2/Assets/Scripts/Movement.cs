@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour
     public SpriteRenderer sR;
     public float speed = 2.0f;
     public Animator anims;
+
+    public AudioClip audio;
+    
+    public AudioSource audioS;
     
     void FixedUpdate()
     {
@@ -21,6 +25,7 @@ public class Movement : MonoBehaviour
 
     public void StartChomp()
     {
+        audioS.PlayOneShot(audio);
         anims.SetTrigger("IsChomp");
     }
 

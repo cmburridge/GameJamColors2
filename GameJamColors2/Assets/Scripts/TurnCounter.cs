@@ -9,8 +9,10 @@ public class TurnCounter : MonoBehaviour
     public int checkpoint = 8;
     public UnityEvent turnStart;
     public Text scoreBoard;
+    public Text finalScore;
     public Image uiColor;
     public TargetData targetColor;
+    public Animator pterry;
 
     public IntData health;
 
@@ -28,10 +30,12 @@ public class TurnCounter : MonoBehaviour
     private void Update()
     {
         scoreBoard.text = turnCount.value.ToString();
+        finalScore.text = scoreBoard.text;
         if (turnCount.value >= checkpoint)
         {
             if (checkpoint >= 15 && checkpoint < 30)
             {
+                pterry.SetTrigger("NotChecked");
                 checkpoint += 5;
                 turnStart.Invoke();
                 uiColor.color = targetColor.Ui;
@@ -39,6 +43,7 @@ public class TurnCounter : MonoBehaviour
             }
             else if (checkpoint >= 30)
             {
+                pterry.SetTrigger("CheckPoint");
                 checkpoint += 3;
                 turnStart.Invoke();
                 uiColor.color = targetColor.Ui;
@@ -46,11 +51,17 @@ public class TurnCounter : MonoBehaviour
             }
             else
             {
+                pterry.SetTrigger("CheckPoint");
                 checkpoint += 8;
                 turnStart.Invoke();
                 uiColor.color = targetColor.Ui;
                 uiColor.sprite = targetColor.wantedSprite;   
             }
+        }
+
+        if (checkpoint >= 50)
+        {
+            pterry.SetTrigger("NotChecked");
         }
     }
 }
